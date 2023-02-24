@@ -68,8 +68,13 @@ const DonutChart = () => {
 		fill: {
 			colors: ['#1ab2ff']
 		  },
-	  
-	}
+
+		  dataLabels: {
+			style: {
+			  colors: ['#004762']
+			}
+		  }
+		};
 
 	return (
 		<Chart

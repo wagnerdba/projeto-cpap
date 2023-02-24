@@ -57,12 +57,12 @@ const BarChart = () => {
     },
 
     fill: {
-      colors: ['#1ab2ff']
+      colors: ['1ab2ff']
     },
     
     dataLabels: {
       style: {
-        colors: ['#ffffff']
+        colors: ['#004762']
       }
     }
   };
