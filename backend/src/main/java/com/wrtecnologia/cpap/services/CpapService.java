@@ -44,4 +44,8 @@ public class CpapService {
         return repository.averageEventsByMonth();
     }
 
+    @Transactional(readOnly=true)
+    public List<CpapEventsDTO> eventsByMonthLimit10() {
+        return repository.eventsByMonthLimit10();
+    }
 }

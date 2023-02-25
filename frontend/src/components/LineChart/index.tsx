@@ -30,7 +30,7 @@ const BarChart = () => {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/cpap/eventos-mes-limit`).then((response) => {
+    axios.get(`${BASE_URL}/cpap/eventos-mes`).then((response) => {
       const data = response.data as SaleSuccess[];
       const myLabels = data.map((x) => x.data);
       const mySeries = data.map((x) => x.eventos_hora);
@@ -52,17 +52,17 @@ const BarChart = () => {
   const options = {
     plotOptions: {
       bar: {
-        horizontal: false,
+        horizontal: true,
       },
     },
 
     fill: {
-      colors: ['#ff6d05']
+      colors: ['#1ab2ff']
     },
     
     dataLabels: {
       style: {
-        colors: ['#FFFFFF']
+        colors: ['#004762']
       }
     }
   };
@@ -72,8 +72,8 @@ const BarChart = () => {
     <Chart 
       options={{...options, xaxis: chartData.labels}}
       series={chartData.series}
-      type="bar"
-      height="350"
+      type="line"
+      height="800"
     />
   );
 };

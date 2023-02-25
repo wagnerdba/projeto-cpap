@@ -44,4 +44,10 @@ public class CpapResource {
         List<CpapAverageEventsByMonthDTO> list = service.averageEventsByMonth();
         return ResponseEntity.ok(list);
     }
+
+    @GetMapping(value = "/eventos-mes-limit")
+    public ResponseEntity<List<CpapEventsDTO>> eventsByMonthLimit10() {
+        List<CpapEventsDTO> list = service.eventsByMonthLimit10();
+        return ResponseEntity.ok(list);
+    }
 }

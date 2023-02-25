@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.Query;
 // import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.NamedNativeQuery;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -21,7 +22,7 @@ public interface CpapRepository extends JpaRepository<Cpap, Long> {
     Page<Cpap> findByData(LocalDate min, LocalDate max, Pageable pageable);
 
     @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapEventsDTO(obj.id, TO_CHAR(obj.data,'DD/MM/YYYY'), obj.eventos_hora) "
-            + " FROM Cpap AS obj ORDER BY obj.data DESC")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
+            + " FROM Cpap AS obj ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
     List<CpapEventsDTO> eventsByMonth();
 
     // TODO: CONSULTA A SER CONSTRUIDA (MEDIA DE EVENTOS POR MÊS)
@@ -29,5 +30,10 @@ public interface CpapRepository extends JpaRepository<Cpap, Long> {
     @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapAverageEventsByMonthDTO(TO_CHAR(EXTRACT(MONTH FROM obj.data), 'fm00'), SUM(obj.eventos_hora) / COUNT(obj.id))"
             + " FROM Cpap AS obj GROUP BY EXTRACT(MONTH FROM obj.data) ORDER BY EXTRACT(MONTH FROM obj.data)")
     List<CpapAverageEventsByMonthDTO> averageEventsByMonth();
+
+    @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapEventsDTO(obj.id, TO_CHAR(obj.data,'DD/MM/YYYY'), obj.eventos_hora) "
+         + " FROM Cpap AS obj WHERE obj.id >= 39 ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
+    List<CpapEventsDTO> eventsByMonthLimit10();
+
 }
 

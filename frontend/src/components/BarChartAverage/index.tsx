@@ -71,7 +71,7 @@ const DonutChart = () => {
 
 		  dataLabels: {
 			style: {
-			  colors: ['#004762']
+			  colors: ['#000000']
 			}
 		  }
 		};
