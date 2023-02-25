@@ -4,6 +4,7 @@ export type Sale = {
     eventos_hora: number;
     horas_uso: string;
     pontuacao: string;
+    col_ret_masc: number;
 }
 
 export type SalePage = {

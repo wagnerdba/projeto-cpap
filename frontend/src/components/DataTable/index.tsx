@@ -38,6 +38,7 @@ const DataTable = () => {
                             <th>Eventos/hora</th>
                             <th>Horas de uso</th>
                             <th>Pontuação</th>
+                            <th>Pausas</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +48,7 @@ const DataTable = () => {
                                 <td>{item.eventos_hora}</td>
                                 <td>{item.horas_uso}</td>
                                 <td>{item.pontuacao}</td>
+                                <td>{item.col_ret_masc}</td>
                             </tr>
                         ))}
                     </tbody>
