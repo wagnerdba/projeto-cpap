@@ -6,8 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
-//@Table(name = "tb_info_cpap", schema="cpap") //POSTGRES
-@Table(name = "tb_info_cpap") //H2
+@Table(name = "tb_info_cpap", schema="cpap")
 public class Cpap implements Serializable {
     private static final long serialVersionUID = 1L;
 
