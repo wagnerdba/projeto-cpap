@@ -62,7 +62,9 @@ const DonutChart = () => {
 		plotOptions: {
 			bar: {
 			  horizontal: false,
+			  columnWidth: '18%',
 			},
+			
 		  },
 
 		fill: {
