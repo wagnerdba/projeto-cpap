@@ -32,7 +32,7 @@ public interface CpapRepository extends JpaRepository<Cpap, Long> {
     List<CpapAverageEventsByMonthDTO> averageEventsByMonth();
 
     @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapEventsDTO(obj.id, TO_CHAR(obj.data,'DD/MM/YYYY'), obj.eventos_hora) "
-         + " FROM Cpap AS obj WHERE obj.id >= 39 ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
+         + " FROM Cpap AS obj WHERE obj.id >= 40 ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
     List<CpapEventsDTO> eventsByMonthLimit10();
 
 }
