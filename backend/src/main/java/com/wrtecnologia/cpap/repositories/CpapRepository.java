@@ -31,9 +31,16 @@ public interface CpapRepository extends JpaRepository<Cpap, Long> {
             + " FROM Cpap AS obj GROUP BY EXTRACT(MONTH FROM obj.data) ORDER BY EXTRACT(MONTH FROM obj.data)")
     List<CpapAverageEventsByMonthDTO> averageEventsByMonth();
 
+    /*
     @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapEventsDTO(obj.id, TO_CHAR(obj.data,'DD/MM/YYYY'), obj.eventos_hora) "
          + " FROM Cpap AS obj WHERE obj.id >= 41 ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
     List<CpapEventsDTO> eventsByMonthLimit10();
+     */
+
+    @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapEventsDTO(obj.id, TO_CHAR(obj.data,'DD/MM/YYYY'), obj.eventos_hora) "
+            + " FROM Cpap AS obj WHERE obj.id > (SELECT MAX(obj.id) - 10 FROM obj) ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
+    List<CpapEventsDTO> eventsByMonthLimit10();
+
 
 }
 
