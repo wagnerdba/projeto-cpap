@@ -67,15 +67,18 @@ const DonutChart = () => {
 			
 		  },
 
+/*		  
 		fill: {
 			colors: ['#1ab2ff']
 		  },
-
+*/
 		  dataLabels: {
 			style: {
-			  colors: ['#000000']
+			  colors: ['#FFFFFF']
 			}
-		  }
+		  },
+
+		  colors: ['#0998B5']
 		};
 
 	return (

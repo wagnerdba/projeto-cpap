@@ -57,14 +57,23 @@ const BarChart = () => {
     },
 
     fill: {
-      colors: ['#1ab2ff']
+      colors: ['#1AB2FF']
     },
     
     dataLabels: {
       style: {
         colors: ['#004762']
       }
-    }
+    },
+    grid: {
+      show: true,
+      xaxis: {
+          lines: {
+              show: true
+          }
+      }
+  },
+    colors: ['#FF6688']
   };
   
 
