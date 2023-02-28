@@ -19,7 +19,7 @@ const Home = () => {
             <div className="text-center">
             <p>
             </p>
-            <p>Esta aplicação consiste em exibir um infográfico a partir de dados fornecidos por um backend construído com Spring e frontend em React (typescript).</p>
+            <p>Esta aplicação consiste em exibir um infográfico a partir de dados fornecidos por um backend Spring e frontend React (typescript).</p>
           </div>
         </div>
       </div>

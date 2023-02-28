@@ -10,15 +10,15 @@ const Dashboard = () => {
         <>
             <NavBar />
             <div className="container">
-                <h1 className="text-center text-primary py-3">Painel de Eventos IAH - CPAP</h1>
+                <h1 className="text-center text-primary py-3">Painel de Eventos - CPAP</h1>
 
                 <div className="row px-3">
                     <div className="col-sm-6">
-                        <h5 className="text-center text-secondary">Registros diários (IAH)</h5>
+                        <h5 className="text-center text-secondary">Registros diários (IAH) - por dia</h5>
                         <LineChart />
                     </div>
                     <div className="col-sm-6">
-                        <h5 className="text-center text-secondary">IAH médio por mês</h5>
+                        <h5 className="text-center text-secondary">Média (IAH) - por mês</h5>
                         <BarChartAverage />
                         <h5 className="text-center text-secondary">Registros diários (IAH) - últimos 10 dias</h5>
                         <BarChart />                        
@@ -29,7 +29,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="row px-3">
-                    <h2 className="text-primary">Registro diário de marcações</h2>
+                    <h2 className="text-primary">Tabela de registro diário</h2>
                 </div>
                 <DataTable />
             </div>
