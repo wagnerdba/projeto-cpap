@@ -14,13 +14,13 @@ const Dashboard = () => {
 
                 <div className="row px-3">
                     <div className="col-sm-6">
-                        <h5 className="text-center text-secondary">Registros diários (IAH) - por dia</h5>
+                        <h5 className="text-center text-secondary">Registros (IAH) - diário</h5>
                         <LineChart />
                     </div>
                     <div className="col-sm-6">
-                        <h5 className="text-center text-secondary">Média (IAH) - por mês</h5>
+                        <h5 className="text-center text-secondary">Média (IAH) - mensal</h5>
                         <BarChartAverage />
-                        <h5 className="text-center text-secondary">Registros diários (IAH) - últimos 10 dias</h5>
+                        <h5 className="text-center text-secondary">Registros (IAH) - últimos 10 dias</h5>
                         <BarChart />                        
                     </div>
                     <div className="col-sm-6">
@@ -29,7 +29,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className="row px-3">
-                    <h2 className="text-primary">Tabela de registro diário</h2>
+                    <h2 className="text-primary text-center">Tabela geral de registros</h2>
                 </div>
                 <DataTable />
             </div>
