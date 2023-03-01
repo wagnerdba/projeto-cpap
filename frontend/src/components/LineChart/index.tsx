@@ -118,7 +118,7 @@ const BarChart = () => {
       series={chartData.series}
       type="line"
       height="500"
-      width="1280"
+      //width="1280"
     />
   );
 };
