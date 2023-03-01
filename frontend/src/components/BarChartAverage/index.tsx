@@ -88,7 +88,7 @@ const DonutChart = () => {
 			options={{ ...options, xaxis: chartData.labels }}
 			series={chartData.series}
 			type="bar"
-			height="400"
+			height="350"
 		/>
 
 	);

@@ -37,7 +37,7 @@ const BarChart = () => {
 
       setChartData({
         labels: {
-          categories: myLabels,
+          categories: myLabels
         },
         series: [
           {
@@ -56,33 +56,69 @@ const BarChart = () => {
       },
     },
 
+    /*
     fill: {
       colors: ['#1AB2FF']
     },
+    */
     
     dataLabels: {
       style: {
-        colors: ['#004762']
-      }
+        colors: ['#0634FE'], fontSize: '8px', FontFace: 'Roboto'
+      },
+      enabledOnSeries: [0], 
+      enabled: true
     },
+    
+    /*
+    markers: {
+      colors: ['#F44336', '#E91E63', '#9C27B0']
+   },
+   */
+
+    noData: {
+      text: 'Carregando...'
+    },
+
+    
+    background: {
+      enabled: true,
+    },
+    
+    stroke: {
+      show: true,
+      width: 4,
+      colors: ['#FF6688'],
+      //curve: 'smooth' //['smooth', 'straight', 'stepline']
+    },
+
     grid: {
       show: true,
       xaxis: {
           lines: {
               show: true
           }
+      },
+/*
+      row: {
+        colors: ['#F44336', '#E91E63', '#9C27B0']
+      },
+
+      column: {
+        colors: ['#F44336', '#E91E63', '#9C27B0']
       }
+*/
   },
-    colors: ['#FF6688']
+    // colors: ['#FF6688']
   };
   
-
   return (
     <Chart 
       options={{...options, xaxis: chartData.labels}}
       series={chartData.series}
       type="line"
-      height="800"
+      height="500"
+      width="1280"
     />
   );
 };

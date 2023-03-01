@@ -57,7 +57,7 @@ const BarChart = () => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '60',
+        columnWidth: '60%',
         distributed: true,
       },
     },
@@ -83,7 +83,7 @@ const BarChart = () => {
       options={{...options, xaxis: chartData.labels}}
       series={chartData.series}
       type="bar"
-      height="350"
+      height="400"
     />
   );
 };
