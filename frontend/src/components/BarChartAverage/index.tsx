@@ -56,13 +56,14 @@ const DonutChart = () => {
 	
     const options = {
 		legend: {
-			show: true
+			show: false
 		},
 
 		plotOptions: {
 			bar: {
 			  horizontal: false,
-			  columnWidth: '18%',
+			  columnWidth: '19%',
+			  distributed: true,
 			},
 			
 		  },
@@ -72,13 +73,14 @@ const DonutChart = () => {
 			colors: ['#1ab2ff']
 		  },
 */
-		  dataLabels: {
+ 		  dataLabels: {
 			style: {
 			  colors: ['#FFFFFF']
 			}
 		  },
 
-		  colors: ['#0998B5']
+		  // colors: ['#0998B5']
+		  colors: ['#33b2df', '#f48024', '#004762', '#69d2e7', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e', '#1ab2ff'],
 		};
 
 	return (
