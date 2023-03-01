@@ -57,7 +57,7 @@ const BarChart = () => {
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '60%',
+        columnWidth: '65',
         distributed: true,
       },
     },

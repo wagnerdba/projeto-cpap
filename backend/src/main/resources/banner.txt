@@ -6,3 +6,4 @@
  `.____ .'|_____|____| |____|_____|
 Powered by Spring Boot ${spring-boot.version}
 Application: ${info.app.name} - ${info.app.version}
+Dev: Wagner Pires (2023)
