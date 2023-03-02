@@ -21,7 +21,7 @@ public interface CpapRepository extends JpaRepository<Cpap, Long> {
 
     // Consulta sem paginacao (GERAL)
     @Query("SELECT new com.wrtecnologia.cpap.dtos.CpapEventsDTO(obj.id, TO_CHAR(obj.data,'DD/MM/YYYY'), obj.eventos_hora) "
-            + " FROM Cpap AS obj ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 //
+            + " FROM Cpap AS obj ORDER BY obj.data")  //JPQL WHERE obj.id >= 37 // WHERE EXTRACT(MONTH FROM obj.data) = 2 // WHERE EXTRACT(MONTH FROM obj.data) = 1
     List<CpapEventsDTO> eventsByMonth();
 
     // Consulta da média de ventos por mês
