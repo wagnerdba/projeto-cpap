@@ -1,11 +1,11 @@
-import NavBar from "components/NavBar";
+import Header from "components/Header";
 import Footer from "components/Footer";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
-      <NavBar />
+      <Header />
       <div className="container">
         <div className="jumbotron">
           <h1 className="display-4 text-center">Infográfico CPAP</h1>

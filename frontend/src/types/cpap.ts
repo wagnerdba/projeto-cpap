@@ -1,4 +1,4 @@
-export type Sale = {
+export type Cpap = {
     id: number;
     data: string;
     eventos_hora: number;
@@ -7,8 +7,8 @@ export type Sale = {
     col_ret_masc: number;
 }
 
-export type SalePage = {
-    content?: Sale[];
+export type CpapPage = {
+    content?: Cpap[];
     last: boolean;
     totalElements: number;
     totalPages: number;
@@ -19,12 +19,12 @@ export type SalePage = {
     empty?: boolean;
 }
 
-export type SaleSum = {
+export type CpapSum = {
     data: string;
     eventos_hora: number;
 }
 
-export type SaleSuccess = {
+export type CpapEvents = {
     data: string;
     eventos_hora: number;
 }

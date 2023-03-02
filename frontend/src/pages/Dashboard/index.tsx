@@ -1,4 +1,4 @@
-import NavBar from "components/NavBar";
+import Header from "components/Header";
 import LineChart from "components/LineChart";
 import BarChartAverage from "components/BarChartAverage";
 import DataTable from "components/DataTable";
@@ -8,7 +8,7 @@ import BarChart from "components/BarChart";
 const Dashboard = () => {
     return (
         <>
-            <NavBar />
+            <Header />
             <div className="container">
                 <h1 className="text-center text-primary py-3">Painel de Eventos - CPAP</h1>
 

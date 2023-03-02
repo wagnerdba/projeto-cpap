@@ -1,14 +1,14 @@
 import axios from "axios";
 import Pagination from "components/Pagination";
 import { useEffect, useState } from "react";
-import { SalePage } from "types/sale";
+import { CpapPage } from "types/cpap";
 import { formatLocalDate } from "utils/format";
 import { BASE_URL } from "utils/requests";
 
 const DataTable = () => {
 
     const [activePage, setActivePage] = useState(0);
-    const [page, setPage] = useState<SalePage>({
+    const [page, setPage] = useState<CpapPage>({
         first: true,
         last: true,
         number: 0,

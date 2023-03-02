@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Chart from 'react-apexcharts';
-import { SaleSum } from 'types/sale';
+import { CpapSum } from 'types/cpap';
 import { round } from 'utils/format';
 import { BASE_URL } from 'utils/requests';
 
@@ -35,7 +35,7 @@ const DonutChart = () => {
 	useEffect(() => {
 		axios.get(`${BASE_URL}/cpap/media-eventos-mes`)
 			.then((response) => {
-				const data = response.data as SaleSum[];
+				const data = response.data as CpapSum[];
 				const myLabels = data.map(x => x.data);
 				const mySeries = data.map(x => round(x.eventos_hora, 1));
 

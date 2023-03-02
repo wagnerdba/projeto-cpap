@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
-import { SaleSuccess } from "types/sale";
+import { CpapEvents } from "types/cpap";
 import { BASE_URL } from "utils/requests";
 
 type SeriesData = {
@@ -31,7 +31,7 @@ const BarChart = () => {
 
   useEffect(() => {
     axios.get(`${BASE_URL}/cpap/eventos-mes`).then((response) => {
-      const data = response.data as SaleSuccess[];
+      const data = response.data as CpapEvents[];
       const myLabels = data.map((x) => x.data);
       const mySeries = data.map((x) => x.eventos_hora);
 
