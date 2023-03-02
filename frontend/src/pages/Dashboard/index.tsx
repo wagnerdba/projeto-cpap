@@ -9,19 +9,19 @@ const Dashboard = () => {
     return (
         <>
             <Header />
-            <div className="container">
+            <div className="container-custom">
                 <h1 className="text-center text-primary py-3">Painel de Eventos - CPAP</h1>
-
                 <div className="row px-3">
                     <div className="col-sm-6">
                         <h5 className="text-center text-secondary">Registros (IAH) - diário</h5>
-                        <LineChart />
+                        <p className="container-custom-l"><LineChart /></p>
                     </div>
                     <div className="col-sm-6">
-                        <h5 className="text-center text-secondary">Média (IAH) - mensal</h5>
-                        <BarChartAverage />
+                        <h5 className="text-center text-secondary ">Média (IAH) - mensal</h5>
+                        <p className="container-custom-g"><BarChartAverage /></p>
+                        
                         <h5 className="text-center text-secondary">Registros (IAH) - últimos 10 dias</h5>
-                        <BarChart />                        
+                        <p className="container-custom-g"><BarChart /></p>
                     </div>
                     <div className="col-sm-6">
 
