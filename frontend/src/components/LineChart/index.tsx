@@ -118,7 +118,6 @@ const BarChart = () => {
       series={chartData.series}
       type="line"
       height="800"
-      width="650"
       //height="500"
       //width="1280"
     />
