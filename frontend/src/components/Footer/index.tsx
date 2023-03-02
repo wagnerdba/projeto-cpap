@@ -6,7 +6,7 @@ const Footer = () => {
               App desenvolvido por:{" "}<a href="https://github.com/wagnerpires" target="_blank" rel="noreferrer"> Wagner Pires</a>
               <br />
                 <small>
-                  <strong>WR - TECNOLOGIA EM SISTEMAS - (61)98162-6852 - wagnerdba@gmail.com</strong>
+                  <strong>WR - TECNOLOGIA EM SISTEMAS - (61)98162-6852</strong>
                 </small>
             </div>
           </div>
