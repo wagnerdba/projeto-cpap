@@ -87,7 +87,7 @@ const BarChart = () => {
     
     stroke: {
       show: true,
-      width: 4,
+      width: 2,
       colors: ['#FF6688'],
       //curve: 'smooth' //['smooth', 'straight', 'stepline']
     },
@@ -118,6 +118,7 @@ const BarChart = () => {
       series={chartData.series}
       type="line"
       height="800"
+      width="650"
       //height="500"
       //width="1280"
     />
