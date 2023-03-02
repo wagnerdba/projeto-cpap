@@ -117,9 +117,9 @@ const BarChart = () => {
       options={{...options, xaxis: chartData.labels}}
       series={chartData.series}
       type="line"
-      height="870"
+      height="800"
       //height="500"
-      width="900"
+      //width="1280"
     />
   );
 };

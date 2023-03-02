@@ -33,23 +33,3 @@ html, body {
 .back-logo {
     background-color: #004B65;
 }
-.container-custom {
-    border: 2px /* solid #004B65 */ ;
-    margin: 2px;
-}
-.container-custom-g {
-    border: 2px /* solid #004B65 */ ;
-    margin-left: 130px;
-    width: 600px;
-}
-.container-custom-l {
-    border: 2px /* solid #004B65 */ ;
-    margin-left: 0px;
-    width: 910px;
-    height: 836px;
-}
-.justify-content-center-z {
-    border: 1px solid #004B65;
-    margin-left: 690px;
-    width: 230px;
-}

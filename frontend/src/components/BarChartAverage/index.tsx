@@ -89,7 +89,6 @@ const DonutChart = () => {
 			series={chartData.series}
 			type="bar"
 			height="350"
-			width="600"
 		/>
 
 	);
