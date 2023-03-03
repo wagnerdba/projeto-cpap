@@ -3,7 +3,7 @@ import LineChart from "components/LineChart";
 import BarChartAverage from "components/BarChartAverage";
 import DataTable from "components/DataTable";
 import Footer from "components/Footer";
-import BarChart from "components/BarChart";
+import BarChart from "components/BarChartLimit";
 
 const Dashboard = () => {
   return (

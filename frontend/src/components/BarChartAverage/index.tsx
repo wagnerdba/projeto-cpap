@@ -59,11 +59,22 @@ const DonutChart = () => {
 			show: false
 		},
 
+   /*
+		chart: {
+      background: "#272a33",
+      foreColor: "#ffffff",
+      zoom: {
+        enabled: false,
+      },
+    },
+	*/
+
 		plotOptions: {
 			bar: {
 			  horizontal: false,
 			  columnWidth: '19%',
 			  distributed: true,
+			  borderRadius: 12,
 			},
 			
 		  },

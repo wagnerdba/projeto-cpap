@@ -50,32 +50,15 @@ const BarChart = () => {
   }, []);
 
   const options = {
-    plotOptions: {
-      bar: {
-        horizontal: true,
-      },
-    },
 
-    /*
-    fill: {
-      colors: ['#1AB2FF']
-    },
-    */
     
-    dataLabels: {
-      style: {
-        colors: ['#0634FE'], fontSize: '8px', FontFace: 'Roboto'
-      },
-      enabledOnSeries: [0], 
-      enabled: true
-    },
-    
+   
     /*
     markers: {
       colors: ['#F44336', '#E91E63', '#9C27B0']
    },
    */
-
+   
     noData: {
       text: 'Carregando...'
     },
@@ -84,42 +67,56 @@ const BarChart = () => {
     background: {
       enabled: true,
     },
-    
-    stroke: {
-      show: true,
-      width: 2,
-      colors: ['#FF6688'],
-      //curve: 'smooth' //['smooth', 'straight', 'stepline']
-    },
 
     grid: {
       show: true,
+      borderColor: '#1AB2FF',
       xaxis: {
           lines: {
+              /* borderColor: '#C0C0C0', */
               show: true
           }
       },
-/*
+
       row: {
-        colors: ['#F44336', '#E91E63', '#9C27B0']
+        colors: ['#f0f4fa', '#ffffff', '#f0f4fa']
       },
 
       column: {
-        colors: ['#F44336', '#E91E63', '#9C27B0']
+        colors: ['#ffffff', '#f0f4fa', '#ffffff']
       }
-*/
   },
-    // colors: ['#FF6688']
   };
   
   return (
     <Chart 
-      options={{...options, xaxis: chartData.labels}}
+      options={{...options, xaxis: chartData.labels, 
+                /* 
+                fill: {
+                  colors: ['#1AB2FF']
+                 },
+                */
+                 stroke: {
+                    show: true,
+                    colors:['#FF6688'], 
+                    width: [3], 
+                    curve: 'straight', // curve: ['smooth', 'straight', 'stepline']
+                    /*dashArray: 5*/},
+                 dataLabels: {
+                    enabled: true,
+                    style: {
+                      colors: ['#0634FE'], fontSize: '8px' /* , FontFace: 'Courier' */
+                    },
+                    enabledOnSeries: [0],
+                    // offsetX: 1, 
+                    },
+                }} 
+      
       series={chartData.series}
       type="line"
       height="800"
-      //height="500"
-      //width="1280"
+      // height="500"
+      // width="720"
     />
   );
 };

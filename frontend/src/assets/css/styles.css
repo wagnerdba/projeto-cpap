@@ -30,6 +30,12 @@ html, body {
 .text-primary {
     color: var(--color-primary) !important;
 }
+
 .back-logo {
     background-color: #004B65;
+}
+
+.div-z {
+    width: 200px;
+    margin: 0 auto;
 }
