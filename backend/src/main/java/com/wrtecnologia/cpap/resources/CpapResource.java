@@ -55,7 +55,7 @@ public class CpapResource {
     @GetMapping(value = "/start", produces="text/plain")
     @ResponseBody
     public String startedApplication() {
-        return appHealth.startedApplication.substring(5, appHealth.startedApplication.length());
+        return appHealth.startedApplication.substring(4, appHealth.startedApplication.length());
     }
 
 }
