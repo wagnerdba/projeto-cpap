@@ -4,14 +4,12 @@ import com.wrtecnologia.cpap.dtos.CpapAverageEventsByMonthDTO;
 import com.wrtecnologia.cpap.dtos.CpapEventsDTO;
 import com.wrtecnologia.cpap.dtos.CpapPaginationDTO;
 import com.wrtecnologia.cpap.services.CpapService;
+import com.wrtecnologia.cpap.utils.AppHealth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,6 +19,9 @@ public class CpapResource {
 
     @Autowired
     private CpapService service;
+
+    @Autowired
+    private AppHealth appHealth;
 
     @GetMapping
     public Page<CpapPaginationDTO> findByData(
@@ -50,4 +51,11 @@ public class CpapResource {
         List<CpapEventsDTO> list = service.eventsByMonthLimit10();
         return ResponseEntity.ok(list);
     }
+
+    @GetMapping(value = "/start", produces="text/plain")
+    @ResponseBody
+    public String startedApplication() {
+        return appHealth.startedApplication.toString();
+    }
+
 }

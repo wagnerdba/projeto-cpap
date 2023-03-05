@@ -1,3 +1,5 @@
+import Start from "Start";
+
 const Footer = () => {
   return (
           <footer className="footer mt-auto bg-dark">
@@ -7,6 +9,7 @@ const Footer = () => {
               <br />
                 <small>
                   <strong>WR - TECNOLOGIA EM SISTEMAS - (61)98162-6852</strong>
+                  <Start />
                 </small>
             </div>
           </div>

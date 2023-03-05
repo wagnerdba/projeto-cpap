@@ -15,9 +15,12 @@ public class AppHealth implements HealthIndicator {
 
     protected static final Map<String, Object> map = new HashMap<>();
 
+    public String startedApplication;
+
     @Override
     public Health health(){
-        map.put("ActualDateTimeAppServer...: ", getDataHora());
+        startedApplication = getDataHora();
+        map.put("ActualDateTimeAppServer...: ", startedApplication);
         return Health.up().withDetails(map).build();
     }
 
