@@ -17,7 +17,7 @@ function Start() {
 
   return (
     <div>
-       Aplicação iniciada {post}
+       Aplicação iniciada em {post}
     </div>
   );
 }
