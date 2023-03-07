@@ -23,9 +23,9 @@ const Home = () => {
             <p></p>
             <p><br /><br /><br />
               <strong>CPAP </strong>é um pequeno aparelho compressor de ar
-              silencioso, utilizado no tratamento para apneia do sono, do tipo
+              silencioso, utilizado no tratamento da apnéia do sono do tipo
               obstrutiva. Foi inventado por um médico australiano em 1981,
-              juntamente ao nome dado a máquina, que é uma abreviação de
+              juntamente ao nome dado à máquina, que é uma abreviação de
               <strong> Continuous Positive Airway Pressure</strong>, ou seja, pressão positiva
               contínua nas vias aéreas.
             </p>
