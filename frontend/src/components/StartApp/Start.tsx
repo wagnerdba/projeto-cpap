@@ -15,11 +15,7 @@ function Start() {
 
   if (!post) return null;
 
-  return (
-    <div>
-       Aplicação iniciada em {post}
-    </div>
-  );
+  return <div>Aplicação iniciada em {post}</div>;
 }
 
-export default Start
+export default Start;

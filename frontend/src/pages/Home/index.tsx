@@ -9,23 +9,32 @@ const Home = () => {
       <div className="container">
         <div className="jumbotron">
           <h1 className="display-4 text-center">Infográfico CPAP</h1>
-          <p className="lead text-center">Analise o rendimento diário do uso do CPAP por diferentes perspectivas</p>
+          <p className="lead text-center">
+            Analise o rendimento diário do uso do CPAP por diferentes
+            perspectivas
+          </p>
           <hr />
           <div className="text-center">
-          <Link className="btn btn-primary btn-lg" to="/dashboard">
-            Acessar painel
-          </Link>
+            <Link className="btn btn-primary btn-lg" to="/dashboard">
+              Acessar painel
+            </Link>
           </div>
-            <div className="text-center">
-            <p>
+          <div className="text-center">
+            <p></p>
+            <p><br /><br /><br />
+              <strong>CPAP </strong>é um pequeno aparelho compressor de ar
+              silencioso, utilizado no tratamento para apneia do sono, do tipo
+              obstrutiva. Foi inventado por um médico australiano em 1981,
+              juntamente ao nome dado a máquina, que é uma abreviação de
+              <strong> Continuous Positive Airway Pressure</strong>, ou seja, pressão positiva
+              contínua nas vias aéreas.
             </p>
-            <p>Esta aplicação consiste em exibir um infográfico a partir de dados fornecidos por um backend Spring e frontend React (typescript).</p>
           </div>
         </div>
       </div>
       <Footer />
-      </>
+    </>
   );
-}
+};
 
 export default Home;

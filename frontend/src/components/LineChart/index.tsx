@@ -50,8 +50,6 @@ const BarChart = () => {
   }, []);
 
   const options = {
-
-    
    
     /*
     markers: {

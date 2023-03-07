@@ -51,36 +51,35 @@ const BarChart = () => {
 
   const options = {
     legend: {
-			show: false
-		},
+      show: false,
+    },
 
     plotOptions: {
       bar: {
         horizontal: false,
-        columnWidth: '65',
+        columnWidth: "65",
         distributed: true,
       },
     },
 
-   /*
+    /*
     fill: {
      colors: ['#FF6D05']
     },
-  */  
+  */
     dataLabels: {
       style: {
-        colors: ['#FFFFFF']
-      }
+        colors: ["#FFFFFF"],
+      },
     },
 
-     colors: ['#1A0FF2']
-     // colors: ['#33b2df', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e', '#f48024', '#69d2e7'],
+    colors: ["#1A0FF2"],
+    // colors: ['#33b2df', '#546E7A', '#d4526e', '#13d8aa', '#A5978B', '#2b908f', '#f9a3a4', '#90ee7e', '#f48024', '#69d2e7'],
   };
-  
 
   return (
-    <Chart 
-      options={{...options, xaxis: chartData.labels}}
+    <Chart
+      options={{ ...options, xaxis: chartData.labels }}
       series={chartData.series}
       type="bar"
       height="400"
