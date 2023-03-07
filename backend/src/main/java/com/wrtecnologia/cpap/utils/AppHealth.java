@@ -19,14 +19,14 @@ public class AppHealth implements HealthIndicator {
 
     @Override
     public Health health(){
-        startedApplication = getDataHora();
-        map.put("ActualDateTimeAppServer...: ", startedApplication);
+        map.put("ActualDateTimeAppServer...: ", getDataHora());
         return Health.up().withDetails(map).build();
     }
 
     @PostConstruct
     public void init() {
-        map.put("StartedSpringApplicationIn: ", getDataHora());
+        startedApplication = getDataHora();
+        map.put("StartedSpringApplicationIn: ", startedApplication);
     }
 
     public void run() {
