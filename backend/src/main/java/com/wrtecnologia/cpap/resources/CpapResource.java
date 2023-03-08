@@ -68,7 +68,7 @@ public class CpapResource {
 
         long millis = System.currentTimeMillis() - start;
 
-        String uptime = String.format("%03d days %02d hours %02d minutes %02d seconds", TimeUnit.MILLISECONDS.toDays(millis),
+        String uptime = String.format("%03d dias %02d horas %02d minutos %02d segundos", TimeUnit.MILLISECONDS.toDays(millis),
                 TimeUnit.MILLISECONDS.toHours(millis) - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millis)),
                 TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
                 TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
