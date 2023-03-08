@@ -11,7 +11,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping(value = "/cpap")
@@ -22,6 +25,8 @@ public class CpapResource {
 
     @Autowired
     private AppHealth appHealth;
+
+    private static final long start = System.currentTimeMillis();
 
     @GetMapping
     public Page<CpapPaginationDTO> findByData(
@@ -56,6 +61,25 @@ public class CpapResource {
     @ResponseBody
     public String startedApplication() {
         return appHealth.startedApplication.substring(4, appHealth.startedApplication.length());
+    }
+
+    @GetMapping("/uptime")
+    public String uptimeApp() {
+
+        long millis = System.currentTimeMillis() - start;
+
+        String uptime = String.format("%03d days %02d hours %02d minutes %02d seconds", TimeUnit.MILLISECONDS.toDays(millis),
+                TimeUnit.MILLISECONDS.toHours(millis) - TimeUnit.DAYS.toHours(TimeUnit.MILLISECONDS.toDays(millis)),
+                TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
+                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
+
+        // LocalDateTime date = LocalDateTime.now().plusDays(4); // ADD DAYS IN DATE
+        LocalDateTime date = LocalDateTime.now();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEE dd/MM/uuuu HH:mm:ss");
+
+        return String.format("%s", uptime);
+
     }
 
 }
