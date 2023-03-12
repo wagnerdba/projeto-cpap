@@ -1,6 +1,7 @@
 import Header from "components/Header";
 import Footer from "components/Footer";
 import { Link } from "react-router-dom";
+import ImgCpap from "assets/img/cpap.png";
 
 const Home = () => {
   return (
@@ -21,14 +22,18 @@ const Home = () => {
           </div>
           <div className="text-center">
             <p></p>
-            <p><br /><br />
+            <p>
+              <br /><br />
               <strong>CPAP </strong>é um pequeno aparelho compressor de ar
               silencioso, utilizado no tratamento da apnéia do sono do tipo
               obstrutiva. Foi inventado por um médico australiano em 1981,
               juntamente ao nome dado à máquina, que é uma abreviação de
-              <strong> Continuous Positive Airway Pressure</strong>, ou seja, pressão positiva
-              contínua nas vias aéreas.
+              <strong> Continuous Positive Airway Pressure</strong>, ou seja,
+              pressão positiva contínua nas vias aéreas.
             </p>
+          </div><br /><br /><br />
+          <div className="container text-center">
+            <img src={ImgCpap} alt="" width="436"/>
           </div>
         </div>
       </div>
