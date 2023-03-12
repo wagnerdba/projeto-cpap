@@ -31,7 +31,7 @@ const Home = () => {
               <strong> Continuous Positive Airway Pressure</strong>, ou seja,
               pressão positiva contínua nas vias aéreas.
             </p>
-          </div><br /><br /><br />
+          </div><br /><br />
           <div className="container text-center">
             <img src={ImgCpap} alt="" width="336"/>
           </div>
