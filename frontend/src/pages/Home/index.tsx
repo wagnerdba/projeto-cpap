@@ -33,7 +33,7 @@ const Home = () => {
             </p>
           </div><br /><br /><br />
           <div className="container text-center">
-            <img src={ImgCpap} alt="" width="436"/>
+            <img src={ImgCpap} alt="" width="336"/>
           </div>
         </div>
       </div>
