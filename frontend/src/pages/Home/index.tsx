@@ -23,7 +23,6 @@ const Home = () => {
           <div className="text-center">
             <p></p>
             <p>
-              <br /><br />
               <strong>CPAP </strong>é um pequeno aparelho compressor de ar
               silencioso, utilizado no tratamento da apnéia do sono do tipo
               obstrutiva. Foi inventado por um médico australiano em 1981,
@@ -31,7 +30,7 @@ const Home = () => {
               <strong> Continuous Positive Airway Pressure</strong>, ou seja,
               pressão positiva contínua nas vias aéreas.
             </p>
-          </div><br /><br />
+          </div>
           <div className="container text-center">
             <img src={ImgCpap} alt="" width="336"/>
           </div>
